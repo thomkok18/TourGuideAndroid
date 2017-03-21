@@ -26,6 +26,12 @@ public class RestaurantFragment extends Fragment {
         WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_restaurants);
         ListView listView = (ListView) rootView.findViewById(R.id.restaurantlist);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Word word = words.get(position);
+            }
+        });
         return rootView;
     }
 }
