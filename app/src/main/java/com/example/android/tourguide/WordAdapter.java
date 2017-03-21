@@ -1,7 +1,6 @@
 package com.example.android.tourguide;
 
 import android.app.Activity;
-import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +11,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter<Word> {
-    private int mColorRecourceId;
 
-    public WordAdapter(Activity context, ArrayList<Word> words, int colorRecourceId) {
+    public WordAdapter(Activity context, ArrayList<Word> words) {
         super(context, 0, words);
     }
 
@@ -45,8 +43,6 @@ public class WordAdapter extends ArrayAdapter<Word> {
         }
 
         View textContainer = listItemView.findViewById(R.id.text_container);
-        int color = ContextCompat.getColor(getContext(), mColorRecourceId);
-        textContainer.setBackgroundColor(color);
         return listItemView;
     }
 }

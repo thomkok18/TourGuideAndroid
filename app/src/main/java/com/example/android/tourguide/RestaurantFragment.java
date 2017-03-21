@@ -23,7 +23,7 @@ public class RestaurantFragment extends Fragment {
         final ArrayList<Word> words = new ArrayList<Word>();
         words.add(new Word("", "", "", "", "", R.drawable.bb));
 
-        WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_restaurants);
+        WordAdapter adapter = new WordAdapter(getActivity(), words);
         ListView listView = (ListView) rootView.findViewById(R.id.restaurantlist);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
