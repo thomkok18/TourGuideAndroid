@@ -1,37 +1,17 @@
 package com.example.android.tourguide;
 
 public class Event {
-    private String mNaam, mPlaats, mWebsite, mTel, mTijden;
+    private String mNaam;
     private int mImageRecourceId = NO_IMAGE_PROVIDED;
     private static final int NO_IMAGE_PROVIDED = -1;
 
-    public Event(String naam, String plaats, String website, String tel, String tijden, int imageRecourceId) {
+    public Event(String naam, int imageRecourceId) {
         mNaam = naam;
-        mPlaats = plaats;
-        mWebsite = website;
-        mTel = tel;
-        mTijden = tijden;
         mImageRecourceId = imageRecourceId;
     }
 
     public String getNaam() {
         return mNaam;
-    }
-
-    public String getplaats() {
-        return mPlaats;
-    }
-
-    public String getwebsite() {
-        return mWebsite;
-    }
-
-    public String getTel() {
-        return mTel;
-    }
-
-    public String getTijden() {
-        return mTijden;
     }
 
     public int getImageRecourceId() {

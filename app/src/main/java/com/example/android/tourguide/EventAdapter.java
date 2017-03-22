@@ -26,14 +26,6 @@ public class EventAdapter extends ArrayAdapter<Event> {
         Event currentEvent = getItem(position);
         TextView naamTextView = (TextView) listItemView.findViewById(R.id.naam_text_view);
         naamTextView.setText(currentEvent.getNaam());
-        TextView plaatsTextView = (TextView) listItemView.findViewById(R.id.plaats_text_view);
-        plaatsTextView.setText(currentEvent.getplaats());
-        TextView websiteTextView = (TextView) listItemView.findViewById(R.id.website_text_view);
-        websiteTextView.setText(currentEvent.getwebsite());
-        TextView telTextView = (TextView) listItemView.findViewById(R.id.tel_text_view);
-        telTextView.setText(currentEvent.getTel());
-        TextView tijdenTextView = (TextView) listItemView.findViewById(R.id.tijden_text_view);
-        tijdenTextView.setText(currentEvent.getTijden());
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
         if (currentEvent.hasImage()) {
             imageView.setImageResource(currentEvent.getImageRecourceId());

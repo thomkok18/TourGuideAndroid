@@ -21,11 +21,10 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
     }
 
-    public void naam(View view) {
-        Uri uri = Uri.parse("http://www.google.com/#q=Citymall Almere, Forum 101, 1315 TG Almere");
-        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        }
+    public void restaurant(View view) {
+        Uri gmmIntentUri = Uri.parse("https://www.google.nl/maps/place/Restaurant+Rhodos");
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        startActivity(mapIntent);
     }
 }

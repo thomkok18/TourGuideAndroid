@@ -21,9 +21,9 @@ public class RestaurantFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.activity_restaurants, container, false);
 
         final ArrayList<Event> events = new ArrayList<Event>();
-        events.add(new Event("Restaurant De Beren", "Plaats: Citymall Almere, Forum 101, 1315 TG Almere", "Website: beren.nl", "Tel: 036 530 3555", "Openingstijden:\nmaandag: 11:00-22:00\ndinsdag: 11:00-22:00\nwoensdag: 11:00-22:00\ndonderdag: 11:00-22:00\nvrijdag: 11:00-22:00\nzaterdag: 11:00-22:00\nzondag: 11:00-22:00", R.drawable.bb));
-        events.add(new Event("Restaurant Rhodos", "Plaats: Metropolestraat 15, 1315 KK Almere", "Website: rhodosalmere.nl", "Tel: 036 534 1901", "Openingstijden:\nmaandag: 16:30-23:00\ndinsdag: 16:30-23:00\nwoensdag: 16:30-23:00\ndonderdag: 16:30-23:00\nvrijdag: 16:30-23:00\nzaterdag: 16:30-23:00\nzondag: 16:30-23:00", R.drawable.rhodos));
-        events.add(new Event("Restaurant De Beren", "Plaats: Citymall Almere, Forum 101, 1315 TG Almere", "Website: beren.nl", "Tel: 036 530 3555", "Openingstijden:\nmaandag: 11:00-22:00\ndinsdag: 11:00-22:00\nwoensdag: 11:00-22:00\ndonderdag: 11:00-22:00\nvrijdag: 11:00-22:00\nzaterdag: 11:00-22:00\nzondag: 11:00-22:00", R.drawable.bb));
+        events.add(new Event("Restaurant De Beren", R.drawable.bb));
+        events.add(new Event("Restaurant Rhodos", R.drawable.rhodos));
+        events.add(new Event("Restaurant De Beren", R.drawable.bb));
 
 
         EventAdapter adapter = new EventAdapter(getActivity(), events);
