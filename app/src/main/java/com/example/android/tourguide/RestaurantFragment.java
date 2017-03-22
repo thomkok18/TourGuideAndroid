@@ -23,7 +23,7 @@ public class RestaurantFragment extends Fragment {
         final ArrayList<Event> events = new ArrayList<Event>();
         events.add(new Event("Restaurant De Beren", R.drawable.bb));
         events.add(new Event("Restaurant Rhodos", R.drawable.rhodos));
-        events.add(new Event("Restaurant De Beren", R.drawable.bb));
+        events.add(new Event("Woodstone Pizza and Wine", R.drawable.woodstone));
 
 
         EventAdapter adapter = new EventAdapter(getActivity(), events);
