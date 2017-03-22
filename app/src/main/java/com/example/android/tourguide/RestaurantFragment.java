@@ -20,16 +20,16 @@ public class RestaurantFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.activity_restaurants, container, false);
 
-        final ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("", "", "", "", "", R.drawable.bb));
+        final ArrayList<Event> events = new ArrayList<Event>();
+        events.add(new Event("Restaurant De Beren", "Citymall Almere, Forum 101, 1315 TG Almere", "beren.nl", "0365303555", "11:00-22:00", R.drawable.bb));
 
-        WordAdapter adapter = new WordAdapter(getActivity(), words);
+        EventAdapter adapter = new EventAdapter(getActivity(), events);
         ListView listView = (ListView) rootView.findViewById(R.id.restaurantlist);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Word word = words.get(position);
+                Event event = events.get(position);
             }
         });
         return rootView;

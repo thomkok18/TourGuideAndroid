@@ -10,10 +10,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class WordAdapter extends ArrayAdapter<Word> {
+public class EventAdapter extends ArrayAdapter<Event> {
 
-    public WordAdapter(Activity context, ArrayList<Word> words) {
-        super(context, 0, words);
+    public EventAdapter(Activity context, ArrayList<Event> events) {
+        super(context, 0, events);
     }
 
     @Override
@@ -23,20 +23,20 @@ public class WordAdapter extends ArrayAdapter<Word> {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 
-        Word currentWord = getItem(position);
+        Event currentEvent = getItem(position);
         TextView naamTextView = (TextView) listItemView.findViewById(R.id.naam_text_view);
-        naamTextView.setText(currentWord.getNaam());
+        naamTextView.setText(currentEvent.getNaam());
         TextView plaatsTextView = (TextView) listItemView.findViewById(R.id.plaats_text_view);
-        plaatsTextView.setText(currentWord.getplaats());
+        plaatsTextView.setText(currentEvent.getplaats());
         TextView websiteTextView = (TextView) listItemView.findViewById(R.id.website_text_view);
-        websiteTextView.setText(currentWord.getwebsite());
+        websiteTextView.setText(currentEvent.getwebsite());
         TextView telTextView = (TextView) listItemView.findViewById(R.id.tel_text_view);
-        telTextView.setText(currentWord.getTel());
+        telTextView.setText(currentEvent.getTel());
         TextView tijdenTextView = (TextView) listItemView.findViewById(R.id.tijden_text_view);
-        tijdenTextView.setText(currentWord.getTijden());
+        tijdenTextView.setText(currentEvent.getTijden());
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
-        if (currentWord.hasImage()) {
-            imageView.setImageResource(currentWord.getImageRecourceId());
+        if (currentEvent.hasImage()) {
+            imageView.setImageResource(currentEvent.getImageRecourceId());
             imageView.setVisibility(View.VISIBLE);
         } else {
             imageView.setVisibility(View.GONE);

@@ -1,11 +1,11 @@
 package com.example.android.tourguide;
 
-public class Word {
+public class Event {
     private String mNaam, mPlaats, mWebsite, mTel, mTijden;
     private int mImageRecourceId = NO_IMAGE_PROVIDED;
     private static final int NO_IMAGE_PROVIDED = -1;
 
-    public Word(String naam, String plaats, String website, String tel, String tijden, int imageRecourceId) {
+    public Event(String naam, String plaats, String website, String tel, String tijden, int imageRecourceId) {
         mNaam = naam;
         mPlaats = plaats;
         mWebsite = website;
