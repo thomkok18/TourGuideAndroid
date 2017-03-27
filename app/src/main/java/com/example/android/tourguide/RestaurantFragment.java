@@ -21,9 +21,9 @@ public class RestaurantFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.activity_restaurants, container, false);
 
         final ArrayList<Event> events = new ArrayList<Event>();
-        events.add(new Event("Restaurant De Beren", R.drawable.bb, "Restaurant+de+beren+almere"));
-        events.add(new Event("Restaurant Rhodos", R.drawable.rhodos, "Restaurant+rhodos+almere"));
-        events.add(new Event("Woodstone Pizza and Wine", R.drawable.woodstone, "Restaurant+woodstone+almere"));
+        events.add(new Event("Restaurant De Beren", R.drawable.bb, "Restaurant+De+Beren+Almere"));
+        events.add(new Event("Restaurant Rhodos", R.drawable.rhodos, "Restaurant+Rhodos"));
+        events.add(new Event("Woodstone Pizza and Wine", R.drawable.woodstone, "WOODSTONE+Pizza+and+Wine+Almere"));
 
         EventAdapter adapter = new EventAdapter(getActivity(), events);
         ListView listView = (ListView) rootView.findViewById(R.id.restaurantlist);
