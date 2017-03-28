@@ -2,7 +2,7 @@ package com.example.android.tourguide;
 
 public class Event {
     private String mNaam;
-    private static String mSite;
+    private String mSite;
     private int mImageRecourceId = NO_IMAGE_PROVIDED;
     private static final int NO_IMAGE_PROVIDED = -1;
 
@@ -16,7 +16,7 @@ public class Event {
         return mNaam;
     }
 
-    public static String getSite() {
+    public String getSite() {
         return mSite;
     }
 

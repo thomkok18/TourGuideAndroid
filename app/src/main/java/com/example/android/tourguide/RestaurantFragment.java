@@ -1,5 +1,7 @@
 package com.example.android.tourguide;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -24,6 +26,9 @@ public class RestaurantFragment extends Fragment {
         events.add(new Event("Restaurant De Beren", R.drawable.bb, "Restaurant+De+Beren+Almere"));
         events.add(new Event("Restaurant Rhodos", R.drawable.rhodos, "Restaurant+Rhodos"));
         events.add(new Event("Woodstone Pizza and Wine", R.drawable.woodstone, "WOODSTONE+Pizza+and+Wine+Almere"));
+        events.add(new Event("Proeflokaal Bregje", R.drawable.bregje, "Proeflokaal+Bregje+Almere"));
+        events.add(new Event("Wereldrestaurant Atlantis", R.drawable.atlantis_almere, "Wereldrestaurant+Atlantis+Almere"));
+        events.add(new Event("Goudenhuis Almere", R.drawable.goudenhuis, "Goudenhuis+Almere"));
 
         EventAdapter adapter = new EventAdapter(getActivity(), events);
         ListView listView = (ListView) rootView.findViewById(R.id.restaurantlist);
@@ -31,7 +36,8 @@ public class RestaurantFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Event event = events.get(position);
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("https://www.google.nl/maps/place/" + events.get(position).getSite())));
             }
         });
         return rootView;
