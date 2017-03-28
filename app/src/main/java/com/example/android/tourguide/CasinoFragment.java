@@ -12,8 +12,6 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import static android.R.attr.data;
-
 public class CasinoFragment extends Fragment {
 
     public CasinoFragment() {
