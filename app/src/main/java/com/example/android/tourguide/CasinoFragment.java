@@ -12,15 +12,15 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class RestaurantFragment extends Fragment {
+public class CasinoFragment extends Fragment {
 
-    public RestaurantFragment() {
+    public CasinoFragment() {
         // Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.activity_restaurants, container, false);
+        View rootView = inflater.inflate(R.layout.activity_casinos, container, false);
 
         final ArrayList<Event> events = new ArrayList<Event>();
         events.add(new Event("Restaurant De Beren", R.drawable.bb, "Restaurant+De+Beren+Almere/@52.3905237,4.8999948,10z/data=!4m8!1m2!2m1!1srestaurants+almere!3m4!1s0x47c616e6b67cc933:0xfc6b559633846b69!8m2!3d52.3684528!4d5.2198084?hl=nl&authuser=0"));
@@ -31,7 +31,7 @@ public class RestaurantFragment extends Fragment {
         events.add(new Event("Goudenhuis Almere", R.drawable.goudenhuis, "Goudenhuis+Almere/@52.3905237,4.8999948,10z/data=!4m8!1m2!2m1!1srestaurants+almere!3m4!1s0x47c6164517886387:0xce67159f7faa33c0!8m2!3d52.3599026!4d5.2548936?hl=nl&authuser=0"));
 
         EventAdapter adapter = new EventAdapter(getActivity(), events);
-        ListView listView = (ListView) rootView.findViewById(R.id.restaurantList);
+        ListView listView = (ListView) rootView.findViewById(R.id.casinoList);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -17,22 +17,26 @@ public class CategoryAdapter extends FragmentPagerAdapter{
     public Fragment getItem(int position) {
         if (position == 0) {
             return new RestaurantFragment();
+        } else if (position == 1) {
+            return new CasinoFragment();
         } else {
-            return new RestaurantFragment();
+            return new HotelFragment();
         }
     }
 
     @Override
     public int getCount() {
-        return 1;
+        return 3;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
         if (position == 0) {
             return mContext.getString(R.string.category_restaurant);
-        } else {
-            return mContext.getString(R.string.category_restaurant);
+        } else if (position == 1) {
+            return mContext.getString(R.string.category_casino);
+        } else{
+            return mContext.getString(R.string.category_hotel);
         }
     }
 }
