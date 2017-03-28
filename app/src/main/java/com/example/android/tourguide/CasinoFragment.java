@@ -12,6 +12,8 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import static android.R.attr.data;
+
 public class CasinoFragment extends Fragment {
 
     public CasinoFragment() {
@@ -23,12 +25,11 @@ public class CasinoFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.activity_casinos, container, false);
 
         final ArrayList<Event> events = new ArrayList<Event>();
-        events.add(new Event("Restaurant De Beren", R.drawable.bb, "Restaurant+De+Beren+Almere/@52.3905237,4.8999948,10z/data=!4m8!1m2!2m1!1srestaurants+almere!3m4!1s0x47c616e6b67cc933:0xfc6b559633846b69!8m2!3d52.3684528!4d5.2198084?hl=nl&authuser=0"));
-        events.add(new Event("Restaurant Rhodos", R.drawable.rhodos, "Restaurant+Rhodos/@52.3905237,4.8999948,10z/data=!3m1!5s0x47c616e1b882cec7:0x55f0c588f2bf3d7c!4m8!1m2!2m1!1srestaurants+almere!3m4!1s0x4165399bf037fe9b:0x827eeae60081d178!8m2!3d52.3742921!4d5.2195145?hl=nl&authuser=0"));
-        events.add(new Event("Woodstone Pizza and Wine", R.drawable.woodstone, "WOODSTONE+Pizza+and+Wine+Almere/@52.3905237,4.8999948,10z/data=!3m1!5s0x47c616e0d7eae875:0x571df4604231cebc!4m8!1m2!2m1!1srestaurants+almere!3m4!1s0x47c616e0e14042b7:0x6daaf55c74dccd4e!8m2!3d52.3700553!4d5.2181784?hl=nl&authuser=0"));
-        events.add(new Event("Proeflokaal Bregje", R.drawable.bregje, "Proeflokaal+Bregje+Almere/@52.3905237,4.8999948,10z/data=!3m1!5s0x47c616e0d7eae875:0x571df4604231cebc!4m8!1m2!2m1!1srestaurants+almere!3m4!1s0x47c616e0dcfdc333:0x4d0245bc9efec6b0!8m2!3d52.3699517!4d5.2175972?hl=nl&authuser=0"));
-        events.add(new Event("Wereldrestaurant Atlantis", R.drawable.atlantis_almere, "Wereldrestaurant+Atlantis+Almere/@52.3905237,4.8999948,10z/data=!4m8!1m2!2m1!1srestaurants+almere!3m4!1s0x47c616edaef81e99:0xceca4e84d2501ed6!8m2!3d52.35595!4d5.222871?hl=nl&authuser=0"));
-        events.add(new Event("Goudenhuis Almere", R.drawable.goudenhuis, "Goudenhuis+Almere/@52.3905237,4.8999948,10z/data=!4m8!1m2!2m1!1srestaurants+almere!3m4!1s0x47c6164517886387:0xce67159f7faa33c0!8m2!3d52.3599026!4d5.2548936?hl=nl&authuser=0"));
+        events.add(new Event("Play World Casino Almere Buiten", R.drawable.play_world_casino_buiten, "Play+World/@52.363797,5.2460537,13z/data=!4m8!1m2!2m1!1scasinos+almere!3m4!1s0x47c617ea5c6f1c61:0x7152406a035e3ea!8m2!3d52.3939552!4d5.2759886?hl=nl&authuser=0"));
+        events.add(new Event("Fair Play Casino Almere Centrum", R.drawable.fair_play_casino_centrum, "Fair+Play+Casino/@52.369704,5.1810998,13z/data=!4m8!1m2!2m1!1scasinos+almere!3m4!1s0x47c616e0b97691f7:0x758f48cc362ef2b1!8m2!3d52.369704!4d5.2161187?hl=nl&authuser=0"));
+        events.add(new Event("Play World Casino Almere Centrum", R.drawable.play_world_casino_centrum, "Play+World+Casino/@52.3685408,5.2018889,14z/data=!4m8!1m2!2m1!1scasinos+almere!3m4!1s0x47c616e0580a83af:0x49412bbe405cfc5c!8m2!3d52.3715544!4d5.2175941?hl=nl&authuser=0"));
+        events.add(new Event("Merkur Casino Almere", R.drawable.merkur_casino, "Merkur+Casino+Almere/@52.3673074,5.213172,16.5z/data=!4m8!1m2!2m1!1scasinos+almere!3m4!1s0x47c616e128ab5c5f:0xf9169deaccecf9c!8m2!3d52.367583!4d5.216322?hl=nl&authuser=0"));
+        events.add(new Event("Fair Play Casino Almere Haven", R.drawable.fair_play_casino_haven, "Fair+Play+Casino/@52.3637086,5.140558,11z/data=!4m8!1m2!2m1!1scasinos+almere!3m4!1s0x47c6169d067c6d61:0xe1cf119e138f4100!8m2!3d52.3336387!4d5.2184471?hl=nl&authuser=0"));
 
         EventAdapter adapter = new EventAdapter(getActivity(), events);
         ListView listView = (ListView) rootView.findViewById(R.id.casinoList);
